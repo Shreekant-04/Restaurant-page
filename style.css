@@ -4,22 +4,17 @@
   font-family: "Times New Roman", Times, serif;
   box-sizing: border-box;
 }
+
 html {
   scroll-behavior: smooth;
 }
+
 body {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   flex-direction: column;
   background-color: #f4f4f6;
-}
-.swiper {
-  margin-top: 30px;
-  width: 80%;
-  height: 90vh;
-  position: relative;
-  border-radius: 20px;
 }
 
 header {
@@ -31,6 +26,7 @@ header {
   position: absolute;
   z-index: 10;
 }
+
 header > a {
   text-decoration: none;
   font-size: calc(10px + 1vw);
@@ -42,18 +38,29 @@ header > a {
   padding: 5px;
   border-radius: 10px;
 }
+
 header > a:hover {
   background-color: #3a6ea563;
 }
 
+.swiper {
+  height: 90vh;
+  width: 95%;
+  margin-top: 30px;
+  position: relative;
+  border-radius: 20px;
+}
+
 .swiper-slide {
   background-position: center;
-  background-size: cover;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
 }
+
 .swiper-wrapper {
   position: relative;
 }
+
 .cart-link {
   display: flex;
   justify-content: center;
@@ -78,22 +85,26 @@ header > a:hover {
   text-decoration: none;
   display: none;
 }
+
 .order-btn:active {
   font-size: calc(10px + 1.15vw);
 }
 
 .menu {
-  height: 105vh;
+  height: auto;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
 }
+
 .menu > h1 {
   width: 80%;
   margin-top: 30px;
+
   font-size: calc(10px + 2.5vw);
 }
+
 .items {
   width: 95%;
   height: 85vh;
@@ -107,23 +118,28 @@ header > a:hover {
   padding: 10px;
   margin-top: 10px;
 }
+
 .items > div {
-  height: 25vmin;
-  width: 25vmin;
+  height: auto;
+  width: auto;
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
+  padding: 10px;
 }
+
 .items-image {
   height: 90px;
   width: 120px;
 }
+
 .veg-nonveg {
   height: 3vmin;
   width: 3vmin;
 }
+
 .item-img {
   display: flex;
   justify-content: center;
@@ -143,16 +159,21 @@ header > a:hover {
   cursor: pointer;
   display: none;
 }
+
 .about {
   height: 60vmin;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  flex-wrap: wrap;
+  padding-top: 20px;
 }
+
 .about > div {
   width: 23%;
   height: 95%;
   padding: 10px;
+  text-align: center;
   border-radius: 20px;
   box-shadow: 0 0 5px;
   background-color: #fff;
@@ -161,48 +182,53 @@ header > a:hover {
   align-items: center;
   flex-direction: column;
 }
+
 .about > div h2 {
   text-align: center;
 }
 
-.cart-link span {
-  font-size: 16px;
-}
 .about > div img {
   height: 150px;
 }
+
 .contact {
-  height: 100vmin;
+  height: auto;
   width: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  padding-top: 30px;
+  padding: 30px;
 }
+
 .contact > h1 {
   font-size: calc(10px + 2.5vw);
 }
 
 .contact-form {
   margin-top: 20px;
-  height: 70vmin;
+  height: max-content;
   width: 30%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  gap: 5px;
   align-items: center;
   box-shadow: 0 0 10px;
   border-radius: 30px;
+  padding-bottom: 10px;
+  font-size: calc(10px + 1.5vmin);
 }
+
 .contact-form label {
   height: 12vmin;
   width: 80%;
   display: flex;
   flex-direction: column;
   padding: 10px;
-  text-indent: 10px;
+  text-indent: 5px;
 }
+
 .contact-form input {
   height: 8vmin;
   width: 100%;
@@ -214,12 +240,13 @@ header > a:hover {
 #text-area {
   resize: none;
   width: 80%;
-  min-height: 15vmin;
+  height: 15vmin;
   padding: 10px;
-
+  border-radius: 20px;
 }
+
 .contact-form button {
-  height: 10vmin;
+  height: 8vmin;
   width: 80%;
   border-radius: 30px;
   border: none;
@@ -235,8 +262,9 @@ footer {
   text-align: center;
   position: relative;
 }
-.back-home{
-  height:15vmin;
+
+.back-home {
+  height: 15vmin;
   width: 15vmin;
   border-radius: 50%;
   color: #fff;
@@ -249,11 +277,12 @@ footer {
   box-shadow: 0 0 10px;
   position: absolute;
   bottom: 60px;
-  right:15px;
+  right: 15px;
   z-index: 20;
-  transition: .5s;
+  transition: 0.5s;
 }
-.back-home:hover{
+
+.back-home:hover {
   transform: scale(1.1);
 }
 
@@ -306,4 +335,77 @@ footer {
   border-top: 1px solid #444;
   padding-top: 10px;
   margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  header {
+    height: auto;
+    padding: 10px;
+  }
+
+  header > a {
+    font-size: 14px;
+    width: 100%;
+    line-height: normal;
+  }
+
+  .swiper {
+    height: 40vh;
+    margin-top: 15px;
+  }
+
+  .items {
+    grid-template-columns: repeat(3, 1fr);
+    width: 90%;
+    height: max-content;
+  }
+
+  .about {
+    height: auto;
+  }
+
+  .about > div {
+    width: 48%;
+    margin-bottom: 20px;
+  }
+
+  .contact-form {
+    width: 80%;
+  }
+  .back-home {
+    bottom: 20px;
+    height: 10vmin;
+    width: 10vmin;
+  }
+}
+
+@media (max-width: 480px) {
+  .items {
+    grid-template-columns: 1fr;
+  }
+  .swiper {
+    height: 30vh;
+    width: 98%;
+    padding: auto;
+  }
+  .swiper-slide {
+    background-size: 100% 100%;
+  }
+  .items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .about > div {
+    width: 95%;
+  }
+  .back-home {
+    height: 10vmin;
+    width: 10vmin;
+    bottom: 10vh;
+  }
+  .back-top-text {
+    display: none;
+  }
+  .swipe {
+    visibility: hidden;
+  }
 }
